@@ -1,25 +1,11 @@
 {
   "projects": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Project 1",
       "description": "This is project 1",
       "tasks": []
     }
   ],
-  "tasks": [
-    {
-      "title": "Task 1",
-      "dateD": "2024-02-09",
-      "dateF": "2024-02-16",
-      "status": "Done",
-      "project": {
-        "id": 1,
-        "title": "Project 1",
-        "description": "This is project 1",
-        "tasks": []
-      },
-      "id": 1
-    }
-  ]
+  "tasks": []
 }

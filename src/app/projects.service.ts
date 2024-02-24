@@ -29,6 +29,10 @@ export class ProjectsService {
   }
 
   updateTask(task: Task) {
-    return this.http.put('http://localhost:3000/tasks/'+task.id, task);
+    return this.http.put('http://localhost:3000/tasks/' + task.id, task);
+  }
+
+  deleteTask(id: number) {
+    return this.http.delete('http://localhost:3000/tasks/' + id);
   }
 }

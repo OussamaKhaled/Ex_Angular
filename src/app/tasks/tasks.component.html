@@ -6,16 +6,21 @@
         <th>Date Fin</th>
         <th>Status</th>
         <th>Project</th>
+        <th>Actions</th> <!-- Add a new column for actions -->
     </tr>
     <tr *ngFor="let p of listTasks">
-        <td>{{p.id}}</td>
-        <td>{{p.title}}</td>
-        <td>{{p.dateD}}</td>
-        <td>{{p.dateF}}</td>
-        <td>{{p.status}}</td>
-        <td>{{p.project.title}}</td>
-        <td><a [routerLink]="['/details/',p.id]">Details</a></td>
+        <td>{{ p.id }}</td>
+        <td>{{ p.title }}</td>
+        <td>{{ p.dateD }}</td>
+        <td>{{ p.dateF }}</td>
+        <td>{{ p.status }}</td>
+        <td>{{ p.project.title }}</td>
+        <td> <!-- Add buttons for actions -->
+            <a [routerLink]="['/details/', p.id]">Details</a>
+            <button (click)="updateTask(p)">Update</button>
+            <button (click)="deleteTask(p)">Delete</button>
+        </td>
     </tr>
 </table>
 <button (click)="calculTasks()">Calculer</button>
-{{nbTasks}}
+{{ nbTasks }}
